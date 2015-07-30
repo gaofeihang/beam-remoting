@@ -7,15 +7,13 @@ Beam common framework needs to be installed.
 
 See https://github.com/gaofeihang/beam-framework
 
-### Usage
-
-#### Installation
+### Installation
 
     git clone https://github.com/gaofeihang/beam-remoting.git
     cd beam-remoting
     mvn clean install -Dmaven.test.skip
 
-#### Maven Dependency
+### Maven Dependency
 
 	<dependency>
 	    <groupId>net.beamlight</groupId>
@@ -23,9 +21,9 @@ See https://github.com/gaofeihang/beam-framework
 	    <version>1.0.0-SNAPSHOT</version>
 	</dependency>
 	
-#### API
+### API
 
-##### Server
+#### Server
 
     BeamServer server = new NettyBeamServer(8080);
     server.setHandler(new PacketHandlerAdapter() {
@@ -37,7 +35,7 @@ See https://github.com/gaofeihang/beam-framework
     });
     server.start();
 	
-##### Client
+#### Client
 
     BeamPacket respPacket = client.sendAndGet(
             PacketUtils.encodeRequest(new BeamRequest("test-service"), Codec.MSGPACK));
